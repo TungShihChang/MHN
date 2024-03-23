@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武器類型-Monster Hunter Now</title>
+    <link rel="icon" type="image/x-icon" href="./image/logo.png" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./second.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <header>
+        <button class="btn-menu" onclick="toggleMenu()">&#9776;</button>
+        <h1 class="logo">Monster Hunter Now</h1>
+        <div id="menu" class="hide">
+            <ul>
+                <li><a href="./index.html" class="menu">首頁</a></li>
+                <li><a href="./news.html" class="menu">NEWS</a></li>   
+                <li><a href="./weapon.html" class="menu">武器類型</a></li>
+                <li><a href="./monster.html" class="menu">魔物介紹</a></li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <span id="member">
+                <h5 id="loginbutton" class="loginbtn">Login</h5>
+            </span>
+            <button id="logout" class="disappear" onclick="localStorage.removeItem('login'),window.location.reload()">登出</button>
+            <a href="./index.html" class="btn-download">立即下載</a>
+        </div>
+    </header>
+    <div id="login" class="disappear login" >
+        <a class="packageclose rounded-circle" id="loginclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div >
+                <label for="account"><p>帳號:</p></label>
+                <input type="text" id="account" name="account">
+            </div>
+            <div>
+                <label for="password"><p>密碼:</p></label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="loginbtn">登入</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+                <h5 id="signupbutton" class="loginbtn">註冊</h5>
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="disappear login">
+        <a class="packageclose rounded-circle" id="signupclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div>
+                <label for="signupaccount"><p>帳號:</p></label>
+                <input type="text" id="signupaccount" name="signupaccount">
+            </div>
+            <div>
+                <label for="password1"><p>密碼:</p></label>
+                <input type="password" id="password1" name="password1">
+            </div>
+            <div>
+                <label for="password2"><p>確認密碼:</p></label>
+                <input type="password" id="password2" name="password2">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="signupbtn">註冊</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+            </div>
+        </form>
+    </div>
+    <img class="backgroundimage img-fluid" src="./image/底圖.png" > 
+    <main>
+        <h2>武器類型</h2>
+        <div class="container d-flex flex-column align-items-center">  
+                <div id="weaponnav" class="weapon-navbar d-flex flex-wrap justify-content-center" ><button id="navbtn" class="disappear"><h5>所有武器類型<i class="bi bi-grid-3x3-gap-fill"></i></h5></button>
+                    <a href="#片手"><div class="weapon-nav border border-2 rounded-1 m-1"><img src="./image/片手圖示.svg" width="100px"></div></a>
+                    <a href="#大劍"><div class="weapon-nav border border-2 rounded-1 m-1"><img src="./image/大劍圖示.svg" width="100px"></div></a>
+                    <a href="#太刀"><div class="weapon-nav border border-2 rounded-1 m-1"><img src="./image/太刀圖示.svg" width="100px"></div></a>
+                    <a href="#大錘"><div class="weapon-nav border border-2 rounded-1 m-1"><img src="./image/大錘圖示.svg" width="100px"></div></a>
+                    <a href="#輕弩"><div class="weapon-nav border border-2 rounded-1 m-1"><img src="./image/輕弩圖示.svg" width="100px"></div></a>
+                    <a href="#弓"><div class="weapon-nav border border-2 rounded-1 m-1"><img src="./image/弓圖示.svg" width="100px"></div></a>
+                    <a href="#長槍"><div class="weapon-nav border border-2 rounded-1 m-1"><img src="./image/長槍圖示.svg" width="100px"></div></a>
+                    <a href="#雙劍"><div class="weapon-nav border border-2 rounded-1 m-1"><img src="./image/雙劍圖示.svg" width="100px"></div></a>
+                </div>
+            <div class="weapon-detail">
+                <div class="teleport mb-5" id="片手"><p></p></div>
+                <div class="weapon-l">
+                    <div class="weapon-video-l"><video controls src="./video/片手.mp4" width="350px" height="500px"></div>
+                    <div class="weapon-wrapper-l px-3">
+                        <h2>單手劍</h2> 
+                        <p>單手劍經常是獵人最一開始使用的武器，攻擊次數較多，可以進行密集的連續攻擊。長按時，還能防禦魔物的攻擊。特殊技能「精準突擊連擊」能讓魔物受到強大的連續攻擊洗禮。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="大劍"><p></p></div>
+                <div class="weapon-r">
+                    <div class="weapon-wrapper-r px-3">
+                        <h2>大劍</h2>
+                        <p>大劍的一擊威力較大，但同時也會露出較大的破綻。可以透過長按施展強大的「蓄力斬」。特殊技能「真‧蓄力斬」能用盡全身力氣對魔物使出斬擊，造成大量傷害。</p>
+                    </div>
+                    <div class="weapon-video-r"><video controls src="./video/大劍.mp4" width="350px" height="500px"></div>
+                </div>
+                <div class="teleport mb-5" id="太刀"><p></p></div>
+                <div class="weapon-l">
+                    <div class="weapon-video-l"><video controls src="./video/太刀.mp4" width="350px" height="500px"></div>
+                    <div class="weapon-wrapper-l px-3">
+                        <h2>太刀</h2> 
+                        <p>太刀動作靈活，是能隨機應變進行強大連續攻擊的武器。太刀具有獨特的「練氣計量表」，藉由攻擊魔物累積至一定量後會提升攻擊力，但一受到攻擊，「練氣計量表」就會減少。施展特殊技能「氣刃兜割」後能夠一躍而起，用太刀從上空斬下，造成大量傷害。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="大錘"><p></p></div>
+                <div class="weapon-r">
+                    <div class="weapon-wrapper-r px-3">
+                        <h2>大錘</h2>
+                        <p>大錘是兼具破壞力和機動力的打擊武器，還能藉由攻擊頭部讓魔物昏厥。長按時可以一邊蓄力，一邊縮短與魔物的距離並使出威力強大的蓄力攻擊。特殊技能「迴轉攻擊」可以一邊揮旋大錘，一邊對魔物造成連續傷害並在最後使出強大的上鉤攻擊。</p>
+                    </div>
+                    <div class="weapon-video-r"><video controls src="./video/大錘.mp4" width="350px" height="500px"></div>
+                </div>
+                <div class="teleport mb-5" id="輕弩"><p></p></div>
+                <div class="weapon-l">
+                    <div class="weapon-video-l"><video controls src="./video/輕弩.mp4" width="350px" height="500px"></div>
+                    <div class="weapon-wrapper-l px-3">
+                        <h2>輕弩槍</h2> 
+                        <p>輕弩槍是能在遠距離進行攻擊的武器。根據弩槍不同，能使用的彈藥也有所不同，可以藉由選擇剋制各魔物的彈藥來占據優勢。特殊技能「反擊龍彈」會發射強大的彈藥，命中後會產生大爆炸，對魔物造成大量傷害。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="弓"><p></p></div>
+                <div class="weapon-r">
+                    <div class="weapon-wrapper-r px-3">
+                        <h2>弓</h2>
+                        <p>弓是擅長在中等距離進行攻擊的武器，可藉由長按使出「蓄力射擊」。蓄力射擊最多能蓄力4個階段，還會根據蓄力階段射出不同類型的箭。特殊技能「龍之箭」的預備動作較大，但能射出具有貫通效果的高威力一箭。</p>
+                    </div>
+                    <div class="weapon-video-r"><video controls src="./video/弓.mp4" width="350px" height="500px"></div>
+                </div>
+                <div class="teleport mb-5" id="長槍"><p></p></div>
+                <div class="weapon-l">
+                    <div class="weapon-video-l"><video controls src="./video/長槍.mp4" width="350px" height="500px"></div>
+                    <div class="weapon-wrapper-l px-3">
+                        <h2>長槍</h2> 
+                        <p>可透過長按防禦，具有非常高的防禦性能，同時也是攻擊範圍較廣的武器。在正確時機施展「反擊突刺」，就能在防禦魔物攻擊時，以破綻最小的方式給予大量傷害。<br><br>特殊技能「突進」會在猛烈地突進後，施展貫穿萬物的一擊。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="雙劍"><p></p></div>
+                <div class="weapon-r">
+                    <div class="weapon-wrapper-r px-3">
+                        <h2>雙劍</h2>
+                        <p>攻擊次數與機動力都相當出色的武器，能夠快速使出連續攻擊。「鬼人化」後動作會出現變化，攻擊性能會進一步提升。有獨自的耐力計量表，鬼人化時會消耗耐力計量表，計量表耗盡就會解除鬼人化狀態。<br><br>特殊技能「空中迴轉亂舞‧天」會飛上高空，施展斬碎魔物的必殺連續攻擊。</p>
+                    </div>
+                    <div class="weapon-video-r"><video controls src="./video/雙劍.mp4" width="350px" height="500px"></div>
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    <footer>
+        <hr class="footer-hr">
+        <div class="tm">
+            <a href="https://nianticlabs.com/" target="_blank"><img src="./image/Niantic.png" height="70px"/></a>
+            <a href="https://www.capcom.com/" target="_blank"><img src="./image/CAPCOM.png" /></a>
+        </div>
+        <div class="socialMedia">
+            <a href="https://www.instagram.com/MH_Now_en/" target="_blank"><img src="./image/instagram.png" height="40px"/></a>
+            <a href="https://www.facebook.com/gaming/MHNowEN" target="_blank"><img src="./image/facebook.png" height="40px"/></a>
+            <a href="https://www.youtube.com/channel/UC9wPQ_V2Rap5z1idDLOrd9w" target="_blank"><img src="./image/youtube.png" height="40px"/></a>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("hide")
+    }
+
+        const nav = document.getElementById("weaponnav");
+        const sticky = nav.offsetTop;
+        const navbtn = document.getElementById("navbtn");
+
+        function navbar() {
+            if(window.scrollY > sticky){
+                navbtn.classList.remove("disappear");
+                navbtn.classList.add("navbtn");
+            } else{
+                nav.classList.remove("sticky");
+                navbtn.classList.add("disappear");
+                navbtn.classList.remove("navbtn");
+            }
+        }
+
+        function navbutton() {
+            nav.classList.toggle("sticky");
+            nav.classList.toggle("col-10");
+        }
+
+        window.onscroll = navbar;
+        navbtn.onclick = navbutton;
+
+                //註冊
+        
+                const signupBtn = document.getElementById("signupbtn");
+
+function signup() {
+    const password1 = document.getElementById("password1");
+    const password2 = document.getElementById("password2");
+    const signupAccount = document.getElementById("signupaccount");
+    const accountList = localStorage.getItem("account")
+
+    if(signupAccount.value == accountList) {
+        alert("用戶已註冊")
+    }
+    else if(password1.value == password2.value) {
+        const accountValue = signupAccount.value;
+        localStorage.setItem("account",accountValue);
+        const passwordValue = password1.value;
+        localStorage.setItem("password",passwordValue);
+        alert("註冊成功")
+    } else {
+        alert("密碼輸入不正確");
+}
+}
+signupBtn.addEventListener("click",signup);
+
+//登入
+
+const loginBtn = document.getElementById("loginbtn");
+
+function login() {
+    const account = document.getElementById("account");
+    const password = document.getElementById("password");
+    const accountList = localStorage.getItem("account");
+    const passwordList = localStorage.getItem("password");
+
+    if(account.value == accountList && password.value == passwordList) {
+        alert("登入成功");
+        localStorage.setItem("login",true);
+        location.reload;
+    }else if(account.value !== accountList){
+        alert("無此用戶");
+    }else if(account.value == accountList && password.value !== passwordList){
+        alert("密碼錯誤");
+    }
+}
+loginBtn.addEventListener("click",login);
+
+//登入畫面跳出 
+
+const loginButton = document.getElementById("loginbutton");
+const loginWindow = document.getElementById("login");
+const signupButton = document.getElementById("signupbutton");
+const signupWindow = document.getElementById("signup");
+const signupClose = document.getElementById("signupclose");
+const loginClose = document.getElementById("loginclose");
+
+
+function toggleLogin() {
+    loginWindow.classList.toggle("disappear");
+    signupWindow.classList.add("disappear");
+    package.classList.add("disappear");
+}
+
+function hideLogin() {
+    loginWindow.classList.add("disappear");
+    signupWindow.classList.remove("disappear");
+}
+
+function closeSignup() {
+    signupWindow.classList.add("disappear");
+}
+function closeLogin() {
+    loginWindow.classList.add("disappear");
+}
+
+
+loginButton.addEventListener("click",toggleLogin);
+signupButton.addEventListener("click",hideLogin);
+signupClose.addEventListener("click",closeSignup);
+loginClose.addEventListener("click",closeLogin);
+
+//登入判斷
+
+const member = document.getElementById("member");
+const loginCheck = localStorage.getItem("login");
+const logoutButton = document.getElementById("logout");
+
+
+function memberCheck(){
+    if(loginCheck) {
+        const accountList = localStorage.getItem("account");
+        member.innerHTML ="<span style='font-size:18px;color:white;'>" + "會員:" +'<br>' + accountList + '</span>';
+        logoutButton.classList.remove("disappear");
+}
+}    
+
+window.onload = memberCheck;
+
+    </script>
+</body>
+</html>

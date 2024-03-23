@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News-Monster Hunter Now</title>
+    <link rel="icon" type="image/x-icon" href="./image/logo.png" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./newspage.css" />
+</head>
+<body>
+    <header>
+        <button class="btn-menu" onclick="toggleMenu()">&#9776;</button>
+        <h1 class="logo">Monster Hunter Now</h1>
+        <div id="menu" class="hide">
+            <ul>
+                <li><a href="./index.html" class="menu">首頁</a></li>
+                <li><a href="./news.html" class="menu">NEWS</a></li>   
+                <li><a href="./weapon.html" class="menu">武器類型</a></li>
+                <li><a href="./monster.html" class="menu">魔物介紹</a></li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <span id="member">
+                <h5 id="loginbutton" class="loginbtn">Login</h5>
+            </span>
+            <button id="logout" class="disappear" onclick="localStorage.removeItem('login'),window.location.reload()">登出</button>
+            <a href="./index.html" class="btn-download">立即下載</a>
+        </div>
+    </header>
+    <div id="login" class="disappear login" >
+        <a class="packageclose rounded-circle" id="loginclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div >
+                <label for="account"><p>帳號:</p></label>
+                <input type="text" id="account" name="account">
+            </div>
+            <div>
+                <label for="password"><p>密碼:</p></label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="loginbtn">登入</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+                <h5 id="signupbutton" class="loginbtn">註冊</h5>
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="disappear login">
+        <a class="packageclose rounded-circle" id="signupclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div>
+                <label for="signupaccount"><p>帳號:</p></label>
+                <input type="text" id="signupaccount" name="signupaccount">
+            </div>
+            <div>
+                <label for="password1"><p>密碼:</p></label>
+                <input type="password" id="password1" name="password1">
+            </div>
+            <div>
+                <label for="password2"><p>確認密碼:</p></label>
+                <input type="password" id="password2" name="password2">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="signupbtn">註冊</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+            </div>
+        </form>
+    </div>
+    <main>
+        <div class="row">
+            <div class="col-lg-3 col-sm-2 col-1"></div>
+            <div class="news-container col-lg-6 col-sm-8 col-10">
+                <h4>News 2023.12.07</h4>
+                <h2>大型更新「雪花散亂之碧雷」到來！</h2>
+                <p>各位獵人，<br>
+                    大型更新「雪花散亂之碧雷」終於在今天發布了！<br>
+                    本次更新內容充滿豐富的新要素，將會新增2種武器與4種大型魔物！<br>
+                    此外，還有「大型連續狩獵」等等。<br>
+                    今年冬天的狩獵將連續不斷！<br>
+                    <br>
+                    「雪花散亂之碧雷」更新內容<br>
+                    <br>
+                    追加武器種類「雙劍」、「長槍」！<br>
+                </p>
+
+                <img src="./image/雙劍長槍.jpg" class="img-fluid" width="700px">
+                
+                <p>
+                    追加武器種類雙劍與長槍。<br>
+                    <br>
+                    ‧雙劍<br>
+                    攻擊次數與機動力都相當出色的武器，能夠快速使出連續攻擊。「鬼人化」後動作會出現變化，攻擊性能會進一步提升。有獨自的耐力計量表，鬼人化時會消耗耐力計量表，計量表耗盡就會解除鬼人化狀態。<br>
+                    特殊技能「空中迴轉亂舞‧天」會飛上高空，施展斬碎魔物的必殺連續攻擊。<br>
+                    <br>
+                    ‧長槍<br>
+                    可透過長按防禦，具有非常高的防禦性能，同時也是攻擊範圍較廣的武器。在正確時機施展「反擊突刺」，就能在防禦魔物攻擊時，以破綻最小的方式給予大量傷害。<br>
+                    特殊技能「突進」會在猛烈地突進後，施展貫穿萬物的一擊。<br>
+                    <br>
+                    追加4種大型魔物！<br>
+                    <br>
+                    骨鎚龍、猛牛龍、冰牙龍及雷狼龍新登場！<br>
+                    在完成新特殊任務內於各章出現的緊急任務後，骨鎚龍、猛牛龍、冰牙龍也會出現在原野上；<br>
+                    雷狼龍除了可在緊急任務中狩獵外，還會限定在12/15起登場的新內容「大型連續狩獵」中出現。<br>
+                    <br>
+                    追加睡眠屬性為新屬性了！<br>
+                    <br>
+                    追加睡眠屬性為新屬性了。累積睡眠屬性傷害，就能讓魔物陷入睡眠狀態。對陷入睡眠狀態的魔物施展的第一擊，會造成比一般攻擊更多的傷害。本次新登場的魔物骨鎚龍素材可製作具有睡眠屬性的武器。<br>
+                    <br>
+                    針對既有武器種類與魔物等方面進行平衡調整了。<br>
+                    <br>
+                    如事前所公告一般，除了追加武器種類與魔物外，為了讓各位體會到更多使用各種武器攻略許多魔物的樂趣，<br>
+                    我們還根據各位的回饋與資料，對既有的魔物及武器種類進行調整了。<br>
+                    <br>
+                    調整的詳細內容請至事前公開的「遊戲平衡調整公告」確認。<br>
+                    <br>
+                    原野積雪了<br>
+                    <br>
+                    森林、沙漠與沼澤等各原野的外觀會出現變化並積雪，小型魔物冰豺狼和冬翼龍也將新登場。此外，BGM也會改變。<br>
+                </p>
+
+                <img src="./image/news5.png" class="img-fluid" width="900px">
+                    
+                <p>
+                                        活動「雷狼龍強襲」&大型連續狩獵開始！<br>
+                                        <br>
+                    雷狼龍將與新內容「大型連續狩獵」同時登場！<br>
+                    <br>
+                    新內容「大型連續狩獵」從12月15日起登場，活動內容是部分採集點會在特定時間變化為「大型連續狩獵點」，並有5隻大型魔物連續登場。出現在大型連續狩獵的大型魔物會比原野的大型魔物強大，請與其他獵人一起挑戰。<br>
+                    <br>
+                    12月15日（五）至12月17日（日），還會隨著開放大型連續狩獵，同時舉辦活動「雷狼龍強襲」，雷狼龍在大型連續狩獵點的出現機率會變得比平常還高。大型連續狩獵的第5隻魔物全都會是雷狼龍！在此期間還會發布期間限定活動任務，完成所有任務即可獲得獵人勳章，快針對雷狼龍的弱點，裝備好冰屬性的武器，前往討伐雷狼龍吧。此活動結束後，大型連續狩獵中雷狼龍的出現機率會恢復正常。<br>
+                    <br>
+                    時間（當地時間）：<br>
+                    <br>
+                    12月15日（五）12:15～12月17日（日）22:00<br>
+                    <br>
+                    活動詳細內容<br>
+                    <br>
+                    ‧期間內，雷狼龍在大型連續狩獵的出現機率會增加。<br>
+                    ‧發布條件為討伐雷狼龍的期間限定任務。完成任務即可獲得素材報酬與獵人勳章。<br>
+                    <br>
+                    注意事項<br>
+                    <br>
+                    ※任何達到HR11以上的人都能參加大型連續狩獵。<br>
+                    ※參加一次「大型連續狩獵」後，需經過一定的等待時間才能再次參加。<br>
+                    ※使用「大型連續狩獵券」即可立刻參加，無須等待。此外，「大型連續狩獵券」可在應用程式內的商店購買。<br>
+                    ※若要參加大型連續狩獵，必須將應用程式更新至12月15日（五）的最新版本。<br>
+                    ※出現機率增加期間內，任何達到HR11以上的人在大型連續狩獵中遇見雷狼龍的機率會增加。<br>
+                    ※雷狼龍在12月17日（日）以後也會出現於大型連續狩獵，但出現機率會恢復正常。<br>
+                    ※已達HR11以上的獵人，特別任務將自動發布至遊戲裡的特別任務頁籤（Specal）。<br>
+                    ※任務的有效期間為當地時間12月15日（五）12:15至12月17日（日）22:00為止。在時間內完成任務獲取報酬吧。<br>
+                    ※內容有可能會變更。<br>
+                    <br>
+                    追隨官方的社群媒體，別錯過任何最新資訊。<br>
+                </p>
+                
+            </div>
+        </div>
+    
+    </main>
+    <footer>  
+        <hr class="footer-hr">
+        <div class="tm">
+            <a href="https://nianticlabs.com/" target="_blank"><img src="./image/Niantic.png" height="70px"/></a>
+            <a href="https://www.capcom.com/" target="_blank"><img src="./image/CAPCOM.png" /></a>
+        </div>
+        <div class="socialMedia">
+            <a href="https://www.instagram.com/MH_Now_en/" target="_blank"><img src="./image/instagram.png" height="40px"/></a>
+            <a href="https://www.facebook.com/gaming/MHNowEN" target="_blank"><img src="./image/facebook.png" height="40px"/></a>
+            <a href="https://www.youtube.com/channel/UC9wPQ_V2Rap5z1idDLOrd9w" target="_blank"><img src="./image/youtube.png" height="40px"/></a>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("hide")
+    }
+
+            //註冊
+        
+            const signupBtn = document.getElementById("signupbtn");
+
+function signup() {
+    const password1 = document.getElementById("password1");
+    const password2 = document.getElementById("password2");
+    const signupAccount = document.getElementById("signupaccount");
+    const accountList = localStorage.getItem("account")
+
+    if(signupAccount.value == accountList) {
+        alert("用戶已註冊")
+    }
+    else if(password1.value == password2.value) {
+        const accountValue = signupAccount.value;
+        localStorage.setItem("account",accountValue);
+        const passwordValue = password1.value;
+        localStorage.setItem("password",passwordValue);
+        alert("註冊成功")
+    } else {
+        alert("密碼輸入不正確");
+}
+}
+signupBtn.addEventListener("click",signup);
+
+//登入
+
+const loginBtn = document.getElementById("loginbtn");
+
+function login() {
+    const account = document.getElementById("account");
+    const password = document.getElementById("password");
+    const accountList = localStorage.getItem("account");
+    const passwordList = localStorage.getItem("password");
+
+    if(account.value == accountList && password.value == passwordList) {
+        alert("登入成功");
+        localStorage.setItem("login",true);
+        location.reload;
+    }else if(account.value !== accountList){
+        alert("無此用戶");
+    }else if(account.value == accountList && password.value !== passwordList){
+        alert("密碼錯誤");
+    }
+}
+loginBtn.addEventListener("click",login);
+
+//登入畫面跳出 
+
+const loginButton = document.getElementById("loginbutton");
+const loginWindow = document.getElementById("login");
+const signupButton = document.getElementById("signupbutton");
+const signupWindow = document.getElementById("signup");
+const signupClose = document.getElementById("signupclose");
+const loginClose = document.getElementById("loginclose");
+
+
+function toggleLogin() {
+    loginWindow.classList.toggle("disappear");
+    signupWindow.classList.add("disappear");
+    package.classList.add("disappear");
+}
+
+function hideLogin() {
+    loginWindow.classList.add("disappear");
+    signupWindow.classList.remove("disappear");
+}
+
+function closeSignup() {
+    signupWindow.classList.add("disappear");
+}
+function closeLogin() {
+    loginWindow.classList.add("disappear");
+}
+
+
+loginButton.addEventListener("click",toggleLogin);
+signupButton.addEventListener("click",hideLogin);
+signupClose.addEventListener("click",closeSignup);
+loginClose.addEventListener("click",closeLogin);
+
+//登入判斷
+
+const member = document.getElementById("member");
+const loginCheck = localStorage.getItem("login");
+const logoutButton = document.getElementById("logout");
+
+
+function memberCheck(){
+    if(loginCheck) {
+        const accountList = localStorage.getItem("account");
+        member.innerHTML ="<span style='font-size:18px;color:white;'>" + "會員:" +'<br>' + accountList + '</span>';
+        logoutButton.classList.remove("disappear");
+}
+}    
+
+window.onload = memberCheck;
+
+    </script>
+</body>
+</html>

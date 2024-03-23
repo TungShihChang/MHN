@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魔物介紹-Monster Hunter Now</title>
+    <link rel="icon" type="image/x-icon" href="./image/logo.png" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./second.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <button class="btn-menu" onclick="toggleMenu()">&#9776;</button>
+        <h1 class="logo">Monster Hunter Now</h1>
+        <div id="menu" class="hide">
+            <ul>
+                <li><a href="./index.html" class="menu">首頁</a></li>
+                <li><a href="./news.html" class="menu">NEWS</a></li>   
+                <li><a href="./weapon.html" class="menu">武器類型</a></li>
+                <li><a href="./monster.html" class="menu">魔物介紹</a></li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <span id="member">
+                <h5 id="loginbutton" class="loginbtn">Login</h5>
+            </span>
+            <button id="logout" class="disappear" onclick="localStorage.removeItem('login'),window.location.reload()">登出</button>
+            <a href="./index.html" class="btn-download">立即下載</a>
+        </div>
+    </header>
+    <div id="login" class="disappear login" >
+        <a class="packageclose rounded-circle" id="loginclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div >
+                <label for="account"><p>帳號:</p></label>
+                <input type="text" id="account" name="account">
+            </div>
+            <div>
+                <label for="password"><p>密碼:</p></label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="loginbtn">登入</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+                <h5 id="signupbutton" class="loginbtn">註冊</h5>
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="disappear login">
+        <a class="packageclose rounded-circle" id="signupclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div>
+                <label for="signupaccount"><p>帳號:</p></label>
+                <input type="text" id="signupaccount" name="signupaccount">
+            </div>
+            <div>
+                <label for="password1"><p>密碼:</p></label>
+                <input type="password" id="password1" name="password1">
+            </div>
+            <div>
+                <label for="password2"><p>確認密碼:</p></label>
+                <input type="password" id="password2" name="password2">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="signupbtn">註冊</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+            </div>
+        </form>
+    </div>
+    <img class="backgroundimage img-fluid" src="./image/底圖.png" > 
+    <main>
+        <h2>魔物介紹</h2>
+        <div>
+            <div class="monster-container">
+                <div class="monster-navbar" id="monsternavbar"><button id="navbtn" class="disappear"><h5>所有魔物<i class="bi bi-grid-3x3-gap-fill ms-3"></i></h5></button>
+                    <a href="#大凶豺龍"><div class="monster-nav "><img src="./image/大凶豺龍.png" height="85px"><p>大凶豺龍</p></div></a>
+                    <a href="#搔鳥"><div class="monster-nav "><img src="./image/搔鳥.png" height="85px"><p>搔鳥</p></div></a>
+                    <a href="#毒妖鳥"><div class="monster-nav "><img src="./image/毒妖鳥.png" height="85px"><p>毒妖鳥</p></div></a>
+                    <a href="#土砂龍"><div class="monster-nav "><img src="./image/土砂龍.png" height="85px"><p>土砂龍</p></div></a>
+                    <a href="#大兇顎龍"><div class="monster-nav "><img src="./image/大兇顎龍.png" height="85px"><p>大兇顎龍</p></div></a>
+                    <a href="#飛雷龍"><div class="monster-nav "><img src="./image/飛雷龍.png" height="85px"><p>飛雷龍</p></div></a>
+                    <a href="#浮空龍"><div class="monster-nav "><img src="./image/浮空龍.png" height="85px"><p>浮空龍</p></div></a>
+                    <a href="#泥魚龍"><div class="monster-nav "><img src="./image/泥魚龍.png" height="85px"><p>泥魚龍</p></div></a>
+                    <a href="#蠻顎龍"><div class="monster-nav "><img src="./image/蠻顎龍.png" height="85px"><p>蠻顎龍</p></div></a>
+                    <a href="#雌火龍"><div class="monster-nav "><img src="./image/雌火龍.png" height="85px"><p>雌火龍</p></div></a>
+                    <a href="#火龍"><div class="monster-nav "><img src="./image/火龍.png" height="85px"><p>火龍</p></div></a>
+                    <a href="#風飄龍"><div class="monster-nav "><img src="./image/風飄龍.png" height="85px"><p>風飄龍</p></div></a>
+                    <a href="#角龍"><div class="monster-nav "><img src="./image/角龍.png" height="85px"><p>角龍</p></div></a>
+                    <a href="#黑角龍"><div class="monster-nav "><img src="./image/黑角龍.png" height="85px"><p>黑角龍</p></div></a>
+                    <a href="#骨鎚龍"><div class="monster-nav "><img src="./image/骨鎚龍.png" height="85px"><p>骨鎚龍</p></div></a>
+                    <a href="#猛牛龍"><div class="monster-nav "><img src="./image/猛牛龍.png" height="85px"><p>猛牛龍</p></div></a>
+                    <a href="#冰牙龍"><div class="monster-nav "><img src="./image/冰牙龍.png" height="85px"><p>冰牙龍</p></div></a>
+                    <a href="#雷狼龍"><div class="monster-nav "><img src="./image/雷狼龍.png" height="85px"><p>雷狼龍</p></div></a>
+                </div>
+                <div class="teleport mb-5" id="大凶豺龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/大凶豺龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>大凶豺龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p style="color: red;">火</p>
+                            <p style="color: blue;"class="hide">水</p>
+                            <p style="color: rgb(255, 255, 0)" class="hide">雷</p>
+                            <p style="color: rgb(39, 189, 189);" class="hide">冰</p>
+                            <p style="color: rgb(73, 42, 73);" class="hide">龍</p>
+                            <p style="color: rgb(212, 114, 3);" class="hide">麻痺</p><p style="color: purple;">毒</p>
+                            <p style="color: rgb(22, 91, 241);">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>身體</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0 ">
+                        <h5>魔物特徵</h5>
+                        <p>覆蓋全身的黃綠色鱗片以及粗壯的四肢，頭部及背部生有大片的鬃毛，為領袖的證明，口內的利牙以及前肢的爪子用以給予獵物致命傷及自我防衛使用。下顎與腹部的極佳的彈力與伸縮能力，能夠撐大吞噬獵物的屍體並暫時儲存，體內具有強酸性質的胃酸，能夠快速將肉塊化作糜狀物以方便消化，但由於太過強烈進而會腐蝕胃壁，大凶豺龍在空腹狀態必須趕緊尋找獵物。滿腹狀態的大凶豺龍會利用巨大的腹部壓向敵人，也會將自己消化過後的肉糜與胃酸向外潑灑。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="搔鳥"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/搔鳥.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>搔鳥</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p style="color: red;" class="hide">火</p>
+                            <p style="color: blue;">水</p>
+                            <p style="color: rgb(255, 255, 0)" class="hide">雷</p>
+                            <p style="color: rgb(39, 189, 189);" class="hide">冰</p>
+                            <p style="color: rgb(73, 42, 73);" class="hide">龍</p>
+                            <p style="color: rgb(212, 114, 3);" class="hide">麻痺</p>
+                            <p style="color: purple;"  class="hide">毒</p>
+                            <p style="color: rgb(22, 91, 241);" class="hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>前腳</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0 ">
+                        <h5>魔物特徵</h5>
+                        <p>有一身黃綠色的皮膚，前肢短小但有著修長而靈活的手指，具備優異的抓握能力。後肢強壯，雖然走路不算快但擅長跳躍。目擊報告發現牠會掠奪其他魔物的蛋，但牠在被攻擊時，通常會因受到驚嚇而將蛋摔落。在戰鬥時會掘起堅硬石塊，當作武器或盾牌使用。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="毒妖鳥"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/毒妖鳥.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>毒妖鳥</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p style="color: red;" class="hide">火</p>
+                            <p style="color: blue;"class="hide">水</p>
+                            <p style="color: rgb(255, 255, 0)">雷</p>
+                            <p style="color: rgb(39, 189, 189);" class="hide">冰</p>
+                            <p style="color: rgb(73, 42, 73);" class="hide">龍</p>
+                            <p style="color: rgb(212, 114, 3);" class="hide">麻痺</p>
+                            <p style="color: purple;" class="hide">毒</p>
+                            <p style="color: rgb(22, 91, 241);">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>左翼</p><p>右翼</p><p>尾巴</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0 ">
+                        <h5>魔物特徵</h5>
+                        <p>毒妖鳥能夠讓舌頭有如長鞭般自由自在地伸縮揮舞，會以舌頭纏繞緊抓食物後再進行獵食。具有將攝取的樹木果實儲存於口腔或尾巴內部的特性，並能將其與毒液混合，吐出強力的帶毒吐息。<br />
+                            毒妖鳥的警戒心和地盤意識很強，並且會在作為主食的植物和樹木果實豐富的地方築巢，毒妖鳥一天的大部分時間都花費在對領地四周的警戒上。因為它們的感知能力很出色，因此會馬上發現入侵者，而根據入侵者的強度改變其態度也是毒妖鳥的特徵。如果認為敵人比自己弱的話，則馬上會襲擊對方並毫不留情地吐出毒液。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="土砂龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/土砂龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>土砂龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p style="color: red;">火</p>
+                            <p style="color: blue;"class="hide">水</p>
+                            <p style="color: rgb(255, 255, 0)" class="hide">雷</p>
+                            <p style="color: rgb(39, 189, 189);" class="hide">冰</p>
+                            <p style="color: rgb(73, 42, 73);" class="hide">龍</p>
+                            <p style="color: rgb(212, 114, 3);" class="hide">麻痺</p>
+                            <p style="color: purple;">毒</p>
+                            <p style="color: rgb(22, 91, 241);" class="hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>前肢</p><p>左後腳</p><p>右後腳</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>具有巨大且發達頭殼的獸龍種，在獸龍中算是體型相對嬌小的物種。甲殼為棕色，上面多有泥土層層堆疊，相當強韌堅硬。前肢生有爪子，主要用於挖掘，後肢發達，瞬發力驚人，可透過短距離加速來攻擊入侵者。<br />
+                            土砂龍以乾燥的沙漠地帶為棲息地，本身具有極強的地盤意識，泥沼地帶為其巢穴中心，對於入侵者會義無反顧地進行驅逐。經常可以看到土砂龍將全身浸入泥沼中，只把一部份的頭部露出，因其鼻孔位於頭殼的頂端，此舉可以確保自身在泥沼中還能進行呼吸。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="大兇顎龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/大兇顎龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>大兇顎龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon hide">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>全身包裹著黑色的鱗片，特徵是口內的一對巨牙，頭部有著一個特別且可以自由展開的構造，稱作頭巾殼，其體內有麻痺器官，可產生出強烈的麻痺性毒素，透過啃咬或吐息來注入外敵或獵物體內。<br />
+                            遭遇入侵地盤的大型魔物會群體一轟而上，透過麻痺毒素牽制住敵人的行動。大兇顎龍會透過震動頭巾殼來吸引雌性，發出的聲響越大越多彩就越能受到雌性青睞，雄性間的爭鬥往往會優先攻擊頭巾殼。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="飛雷龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/飛雷龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>飛雷龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon hide">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>尾巴</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>體型纖細嬌小，動作敏捷，由蒼白色的鱗片交疊而成，背上覆蓋豐厚的體毛，可以藉由摩擦產生靜電，尾巴佔了全身相當的比例，上面生有特殊的器官-電極針，可以幫助蓄電。當身上的靜電達到一定程度後會進入帶電狀態，全身的體毛會豎立起來，並進一步提升移動速度。<br />
+                            雖然飛雷龍的前肢生有銳爪，但只用於攀附樹幹，大多不會在戰鬥中使用。相對地，飛雷龍十分傾向於使用甩尾和前咬，在蓄電之後還可以在甩尾或前咬命中時對對手造成雷屬性傷害。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="浮空龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/浮空龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>浮空龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon hide">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>頸袋</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>全身大部分被柔毛包覆，尾部扁平且為膠質成分甲殼，相較其他部位堅硬。在浮空龍的脖子上有一種特化而來的部位頸袋，本身肺活量大，能夠將大量空氣吸入，並將頸袋填滿空氣，把自己鼓得如一顆氣球般，並藉由風來進行漂浮移動，膨脹自己亦有對其他生物產生一定的威嚇作用。<br />
+                            本身體型相較其他飛龍嬌小，性格溫馴，但對於試圖攻擊自己的生物會本能抵禦。部分個體會使出強烈的龍捲風吐氣攻擊。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="泥魚龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/泥魚龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>泥魚龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon hide">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>尾巴</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>泥魚龍外形上如同一條長了雙腿的大腔棘魚，全身覆蓋著土黃色的甲殼與鱗片。下顎為雙層式結構，生有板狀的利齒，能夠賦予泥魚龍極強的咬合力。與一般魚類不同，泥魚龍的生有四個背鰭，再加上發達的鰓、胸鰭和尾鰭，使得泥魚龍能夠在粘稠的沼澤之中行動自如。<br />
+                            泥魚龍的主要捕食武器是其龐大的體型和鋒利的牙齒，能夠在泥潭之中利用自身敏捷的身手使出撕咬、甩尾、衝撞等基本的近戰技能，或是潛入淤泥之中，從敵人的腳下猛然躍起，藉助強勁的跳躍力對敵人展開勢大力沉的猛擊。</p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="蠻顎龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/蠻顎龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>蠻顎龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon hide">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>尾巴</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>外觀與現實的恐龍有很大的相似，下顎附有一列的棘且咬合力大，因而得名蠻顎龍。除了自豪的下顎外，蠻顎龍後肢的腳力特別發達，即使有急遽的高低差也可以輕鬆跳躍。尾部具有棘刺和結實的肌肉，能夠輕鬆甩開穿著鎧甲的獵人。在蠻顎龍後肢上側的腰骨上有一個可以開閉的膜狀構造，興奮狀態時會向外展開，由於上面佈滿微血管且表皮層薄，有調節自身體溫以及威嚇的作用。<br />
+                            蠻顎龍在戰鬥的過程中會利用自身體型的優勢，對獵物展開撕咬、甩尾、蹬踹等肉搏招式，配合自身強悍的腳力，蠻顎龍能夠進行超遠距離的跳躍，或是張開鏟斗般的巨口，使出一招破壞力極大的衝撞。 </p>
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="雌火龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/雌火龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>雌火龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>左翼</p><p>右翼</p><p>尾巴</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>雌火龍的甲殼為墨綠色，可以幫助他融入叢林環境。翼膜有著不同於雄性的特殊紋路，背上、翼與尾巴有特化的尖銳的毒棘。在獵捕多以衝撞攻擊為主，或者使用尾部毒刺分泌的毒液來削弱獵物體力再殺害<br />
+                            雌火龍廣泛分佈各地，主要棲息在森林中或丘陵，也有在沙漠現身的紀錄，繁殖期以外的時間大多單獨行動，偶爾會與雄性共同狩獵。</p>
+
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="火龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/火龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>火龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon">龍</p>
+                            <p class="palsy hide ">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>腹部</p><p>翅膀</p><p>尾巴</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>火龍類是少數具有雌雄異形的飛龍種之一。雄火龍全身被赤紅色的甲殼與黑色的棘刺所包覆，可以緩衝來自飛行或外敵所造成的衝擊。體內具有充滿可燃粉塵的特殊器官，可透過吸入空氣，藉由壓縮後射出火球，而口內的特殊表皮則能避免火龍在吐出火焰的過程中造成燒傷。<br />
+                            火龍視力極佳，一般多單獨於高空中盤旋，巡邏自己的地盤，偶爾也會與雌性個體一起行動狩獵。通常捕獵營養價值高的中型草食種魔物與空中的大型鳥類為食，令該區域的小型生物一察覺火龍的影子時便會驚慌逃跑。</p>
+
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="風飄龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/風飄龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>風飄龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon hide">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>左翼</p><p>右翼</p><p>尾巴</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>具備優秀飛行能力的大型飛龍，在頭部、雙翼與尾皆生有特化的膜狀器官，稱作飛膜，可以透過肌肉來控制開合。其體內具有特殊器官冰結袋，會分泌出低溫的體液並輸送至位於雙翼背面、尾巴內側及腹部的腺體，並向外排出，對敵人造成冰屬性攻擊。<br />
+                            風漂龍是肉食性飛龍，主食是芳翼龍。習慣從獵物的死角突擊，若不慎脫逃則會利用身體生成的凍氣來降低獵物的行動能力。</p>
+
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="角龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/角龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>角龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice">冰</p>
+                            <p class="dragon">龍</p>
+                            <p class="palsy ">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>腹部</p><p>翅膀</p><p>尾巴</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>土黃色的身軀，甲殼厚重堅硬，頭上長有一對巨大的角，其剖面能看見年輪並推算其年齡。嘴巴長著兩顆向外延伸巨大的牙齒，尾巴如同大鐵鎚，用以驅離與威嚇敵人。陸上特化型飛龍，幾乎喪失飛行能力，取而代之的是鑽入沙地潛行，因此翼爪漸漸發展為方便挖開沙土的構造，在地中會集中聽覺神經的運作來鎖定敵人的方位再進行伏擊。<br />
+                            以沙漠等乾燥區域為活動範圍，縱使看似兇惡，但卻是草食性魔物，且立於生態系頂點，以仙人掌為主食。性格極其獰猛，領地意識強烈，若在地盤中發現入侵者，便會積極攻擊入侵生物，包含同種間的角龍，因此大多獨居為主。</p>
+
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="黑角龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/黑角龍.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>黑角龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice">冰</p>
+                            <p class="dragon hide">龍</p>
+                            <p class="palsy">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>腹部</p><p>翅膀</p><p>尾巴</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>角龍的亞種，但嚴格來說是進入繁殖期雌性角龍的警告色，因此應該稱為角龍繁殖期。由於激素的分泌，全身變得漆黑且眼睛發出紅光，又被稱為死神。相較於原種更具有領地性及警戒意識，即使距離遙遠亦會主動發動攻擊並窮追到底，就連同種角龍也不放過，攻擊較一般狀態更為猛烈，特別是從地底高速飛出的襲擊。<br />
+                        </p>
+
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="骨鎚龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/骨鎚龍 lg.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>骨鎚龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice">冰</p>
+                            <p class="dragon">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>左後腳</p><p>右後腳</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>有巨大下顎骨的獸龍，全身包覆著魔物的骸骨。藉由黑油來黏附骸骨以保護柔軟的軀體，這些骨頭會依照不同的功能而被骨鎚龍黏附於不同的部位上。位於頭殼的骨頭有增加下顎硬度與保護頭部的功能；背上的的骨頭較為尖銳，有穩定身軀的作用；而位於後肢兩側的角骨最為巨大，能夠幫助在高速迴轉過彎時保持平衡、轉換方向以及剎車之用。骨鎚龍身上的骨頭也會藉由甩動而向外飛散，用來嚇阻敵人。<br />
+                            會旋轉滾動於自己的領地上，性格較為溫馴，對於沒有威脅性的生物不會主動驅離。在進食的過程會連帶吃下一些能夠分解骨頭的特殊微生物，透過這些微生物骨鎚龍便能獲取能量。在分解骨頭過程會產生一些具有催眠物質的瓦斯，當面臨外敵便會由排氣器官向外逸散出去。</p>
+
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="猛牛龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/猛牛龍 lg.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>猛牛龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>左角</p><p>右角</p><p>左後腳</p><p>右後腳</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>擁有一對大角的獸龍種，全身覆蓋豐滿的灰白色體毛，和大多獸龍一樣後肢較前肢巨大，中央腳趾特別發達且腳掌平而寬，可以用來支撐身體與頭部的重量。頭上的巨角，用來突飛外敵外，還可以連帶鏟起巨大的雪球或倒下的樹木。在猛牛龍鼻子前有一個可以前後伸縮的小角，興奮狀態時會向前立起，可能是用於威嚇用，詳細不明。<br />
+                            適應寒冷地帶的獸龍種，性格溫馴，但對於構成自己威脅的生物會積極攻擊。為少見的草食性獸龍種，會利用大角將厚重積雪推開並食用埋藏於其中的植物嫩葉或根部。猛牛龍定期會至溫泉湧出區飲用溫泉水，補充水分與熱量，並利用地熱來休息取暖。</p>
+
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="冰牙龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/冰牙龍 lg.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>冰牙龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice hide">冰</p>
+                            <p class="dragon hide">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>左棘</p><p>右棘</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>全身覆蓋白色甲殼與毛皮的四足飛龍，頭部有著巨大而銳利的琥珀色犬齒，用來切割獵物的身體。擅長在地面與低空行動，甚至能登上垂直的冰壁上而不會跌落，靠得是腳底生長出的尖刺，能夠防止自身打滑。<br />
+                            體內的部分，具有冰結袋這個特殊器官，裡面能產生冷凍的液體，將其射出後配合肺部的空氣，能夠產生一種螺旋狀的氣流，在著地後形成短暫的龍捲風，大多於牽制敵人或獵物時使用。</p>
+
+                    </div>
+                </div>
+                <div class="teleport mb-5" id="雷狼龍"><p></p></div>
+                <div class="monster-detail row border p-0" >
+                    <div class="monster-img col-sm-8 col-12">
+                        <img src="./image/雷狼龍 lg.png" class="img-fluid m-0">
+                    </div>
+                    <div class="monster-name col-sm-4 col-12 d-flex flex-column justify-content-around m-0 ">
+                        <h3>雷狼龍</h3>
+                        <h5>克制屬性</h5>
+                        <div class="monster-weakness">
+                            <p class="fire hide">火</p>
+                            <p class="water hide">水</p>
+                            <p class="lightning hide">雷</p>
+                            <p class="ice">冰</p>
+                            <p class="dragon hide">龍</p>
+                            <p class="palsy hide">麻痺</p>
+                            <p class="poison hide">毒</p>
+                            <p class="sleep hide">睡眠</p>
+                        </div>
+                        <h5>弱點部位</h5> 
+                        <div> 
+                            <p>頭部</p><p>背部</p>
+                        </div>
+                    </div>
+                    <div class="monster-info col-12 m-0">
+                        <h5>魔物特徵</h5>
+                        <p>頭上有一對角，四肢發達，動作靈活，能夠作出一些快速跳躍翻仰動作。身體的黃色甲殼以及白色毛髮具有蓄電功能，本身可以透過特別的脂肪來產生些許靜電力，供與自己的共生生物-雷光蟲使用。<br />
+                            當身旁的雷光蟲到達一定數量後，雷狼龍便會進入超帶電狀態，身上甲殼上甲鞘以及頭上的角會向外彈開體毛也會直豎，全身皆帶有非常強力的電流並發出青白色的光芒。此狀態在肉體韌性與敏捷性都會得到很大的成長，也完全不會疲累，但肉質也會相對變得柔軟。若要令其解除超帶電，必須設法減少其身旁雷光蟲的數量。</p>
+
+                    </div>
+                </div>
+
+        </div>
+    </main>
+    <footer>
+        <hr class="footer-hr">
+        <div class="tm">
+            <a href="https://nianticlabs.com/" target="_blank"><img src="./image/Niantic.png" height="70px"/></a>
+            <a href="https://www.capcom.com/" target="_blank"><img src="./image/CAPCOM.png" /></a>
+        </div>
+        <div class="socialMedia">
+            <a href="https://www.instagram.com/MH_Now_en/" target="_blank"><img src="./image/instagram.png" height="40px"/></a>
+            <a href="https://www.facebook.com/gaming/MHNowEN" target="_blank"><img src="./image/facebook.png" height="40px"/></a>
+            <a href="https://www.youtube.com/channel/UC9wPQ_V2Rap5z1idDLOrd9w" target="_blank"><img src="./image/youtube.png" height="40px"/></a>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("hide")
+    }
+
+    const nav = document.getElementById("monsternavbar");
+        const sticky = nav.offsetTop;
+        const navbtn = document.getElementById("navbtn");
+
+        function navbar() {
+            if(window.scrollY > sticky){
+                navbtn.classList.remove("disappear");
+                navbtn.classList.add("navbtn");
+            } else{
+                nav.classList.remove("stickymon");
+                navbtn.classList.add("disappear");
+                navbtn.classList.remove("navbtn");
+            }
+        }
+
+        function navbutton() {
+            nav.classList.toggle("stickymon");
+            nav.classList.toggle("col-10");
+        }
+
+        window.onscroll = navbar;
+        navbtn.onclick = navbutton;
+
+        //註冊
+        
+        const signupBtn = document.getElementById("signupbtn");
+
+        function signup() {
+            const password1 = document.getElementById("password1");
+            const password2 = document.getElementById("password2");
+            const signupAccount = document.getElementById("signupaccount");
+            const accountList = localStorage.getItem("account")
+
+            if(signupAccount.value == accountList) {
+                alert("用戶已註冊")
+            }
+            else if(password1.value == password2.value) {
+                const accountValue = signupAccount.value;
+                localStorage.setItem("account",accountValue);
+                const passwordValue = password1.value;
+                localStorage.setItem("password",passwordValue);
+                alert("註冊成功")
+            } else {
+                alert("密碼輸入不正確");
+        }
+}
+        signupBtn.addEventListener("click",signup);
+
+        //登入
+        
+        const loginBtn = document.getElementById("loginbtn");
+
+        function login() {
+            const account = document.getElementById("account");
+            const password = document.getElementById("password");
+            const accountList = localStorage.getItem("account");
+            const passwordList = localStorage.getItem("password");
+
+            if(account.value == accountList && password.value == passwordList) {
+                alert("登入成功");
+                localStorage.setItem("login",true);
+                location.reload;
+            }else if(account.value !== accountList){
+                alert("無此用戶");
+            }else if(account.value == accountList && password.value !== passwordList){
+                alert("密碼錯誤");
+            }
+        }
+        loginBtn.addEventListener("click",login);
+
+        //登入畫面跳出 
+
+        const loginButton = document.getElementById("loginbutton");
+        const loginWindow = document.getElementById("login");
+        const signupButton = document.getElementById("signupbutton");
+        const signupWindow = document.getElementById("signup");
+        const signupClose = document.getElementById("signupclose");
+        const loginClose = document.getElementById("loginclose");
+
+
+        function toggleLogin() {
+            loginWindow.classList.toggle("disappear");
+            signupWindow.classList.add("disappear");
+            package.classList.add("disappear");
+        }
+
+        function hideLogin() {
+            loginWindow.classList.add("disappear");
+            signupWindow.classList.remove("disappear");
+        }
+
+        function closeSignup() {
+            signupWindow.classList.add("disappear");
+        }
+        function closeLogin() {
+            loginWindow.classList.add("disappear");
+        }
+
+
+        loginButton.addEventListener("click",toggleLogin);
+        signupButton.addEventListener("click",hideLogin);
+        signupClose.addEventListener("click",closeSignup);
+        loginClose.addEventListener("click",closeLogin);
+
+        //登入判斷
+        
+        const member = document.getElementById("member");
+        const loginCheck = localStorage.getItem("login");
+        const logoutButton = document.getElementById("logout");
+
+       
+        function memberCheck(){
+            if(loginCheck) {
+                const accountList = localStorage.getItem("account");
+                member.innerHTML ="<span style='font-size:18px;color:white;'>" + "會員:" +'<br>' + accountList + '</span>';
+                logoutButton.classList.remove("disappear");
+        }
+    }    
+
+        window.onload = memberCheck;
+
+    </script>
+</body>
+</html>

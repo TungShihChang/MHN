@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter Now</title>
+    <link rel="icon" type="image/x-icon" href="./image/logo.png" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <button class="btn-menu" onclick="toggleMenu()">&#9776;</button>
+        <h1 class="logo">Monster Hunter Now</h1>
+        <div id="menu" class="hide">
+            <ul>
+                <li><a href="./index.html" class="menu">首頁</a></li>
+                <li><a href="./news.html" class="menu">NEWS</a></li>   
+                <li><a href="./weapon.html" class="menu">武器類型</a></li>
+                <li><a href="./monster.html" class="menu">魔物介紹</a></li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <span id="member">
+                <h5 id="loginbutton" class="loginbtn">Login</h5>
+            </span>
+            <button id="logout" class="disappear" onclick="localStorage.removeItem('login'),window.location.reload()">登出</button>
+            <a href="./index.html" class="btn-download">立即下載</a>
+        </div>
+    </header>
+    <div id="login" class="disappear login" >
+        <a class="packageclose rounded-circle" id="loginclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div >
+                <label for="account"><p>帳號:</p></label>
+                <input type="text" id="account" name="account">
+            </div>
+            <div>
+                <label for="password"><p>密碼:</p></label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="loginbtn">登入</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+                <h5 id="signupbutton" class="loginbtn">註冊</h5>
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="disappear login">
+        <a class="packageclose rounded-circle" id="signupclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div>
+                <label for="signupaccount"><p>帳號:</p></label>
+                <input type="text" id="signupaccount" name="signupaccount">
+            </div>
+            <div>
+                <label for="password1"><p>密碼:</p></label>
+                <input type="password" id="password1" name="password1">
+            </div>
+            <div>
+                <label for="password2"><p>確認密碼:</p></label>
+                <input type="password" id="password2" name="password2">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="signupbtn">註冊</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+            </div>
+        </form>
+    </div>
+
+    <img  class="img-fluid home-background-image" id="homeimage" src="./image/home-background-lg.png">
+    <div class="container">
+        <main>
+            <div class="home-page1">
+                <div class="slogan text-center">
+                    <h2>狩獵舞台是現實世界！</h2>
+                    <a href="https://apps.apple.com/us/app/monster-hunter-now/id6445906110"><img src="./image/appstore.svg" height="50px"  /></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.monsterhunter"><img src="./image/googleplay.png" height="50px" /></a>
+                </div>
+            </div>
+            <h2>News</h2>
+            <div class="news">
+                <div><a href="./news20231120.html"><img src="./image/news1.jpg" width="350px"></a><p>News  2023.11.20</p><h3>沙漠咆嘯<br />角龍</h3></div>
+                <div><a href="./news20231114.html"><img src="./image/news2.jpg" width="350px"></a><p>News  2023.11.14</p><h3>風中飄盪的寒意降臨!討伐風飄龍吧!</h3></div>
+                <div><a href="./news20231027.html"><img src="./image/news3.jpg" width="350px"></a><p>News  2023.10.27</p><h3>滿身泥濘大騷動！討伐泥魚龍吧</h3></div>
+            </div>
+            <h2>遊戲特色</h2>
+            <div class="weapon">
+                <div class="wrapper">
+                    <h2>武器類型</h2>
+                    <p>為了對抗強大的魔物需要使用各種武器，在此觀看各種武器的特徵與動作。</p>
+                    <a href="./weapon.html" class="btn-detail">查看詳情</a>
+                </div>
+                <img src="./image/武器.jpg" width="300" height="500" > 
+            </div>
+            <div class="monster">
+                <img src="./image/街道火龍.png" width="300" height="500"> 
+                <div class="wrapper2">
+                    <h2>魔物</h2>
+                    <p>突然從魔物獵人的世界闖入現實世界的魔物們。</p>
+                    <a href="./monster.html" class="btn-detail">查看詳情</a>
+                </div>
+            </div>
+            <div>
+                <img  id="cat" class="disappear" src="./image/貓貓大放送.png">
+            </div>
+            <div id="package" class="package disappear py-2">
+                <a class="packageclose rounded-circle" id="packageclose">X</a>
+                <div class="gift-wrapper py-2">
+                    <img class="gift" src="./image/寶箱.webp" >
+                    <h3>冬季假期禮包</h3>
+                    <h4>490元</h4>
+                </div>
+                <div class="items-wrapper">
+                    <div class="d-flex flex-column align-items-center">   
+                        <img class="mx-md-4 mx-2 d-flex flex-column" src="./image/paintball.webp" >
+                        <p class=" px-2">5</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">                
+                        <img class="mx-md-4 mx-2" src="./image/strollingball.webp" >
+                        <p class=" px-2">5</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">                   
+                        <img class="mx-md-4 mx-2" src="./image/healthpotion.webp" >
+                        <p class=" px-2">20</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">                    
+                        <img class="mx-md-4 mx-2" src="./image/gem.webp" >
+                        <p class=" px-2">2000</p>
+                    </div>
+                </div>
+                <a href="#" id="purchase" class="btn-detail">購買</a>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <hr class="footer-hr">
+        <div class="tm">
+            <a href="https://nianticlabs.com/" target="_blank"><img src="./image/Niantic.png" height="70px"/></a>
+            <a href="https://www.capcom.com/" target="_blank"><img src="./image/CAPCOM.png"  /></a>
+        </div>
+        <div class="socialmedia">
+            <a href="https://www.instagram.com/MH_Now_en/" target="_blank"><img src="./image/instagram.png" height="40px"/></a>
+            <a href="https://www.facebook.com/gaming/MHNowEN" target="_blank"><img src="./image/facebook.png" height="40px"/></a>
+            <a href="https://www.youtube.com/channel/UC9wPQ_V2Rap5z1idDLOrd9w" target="_blank"><img src="./image/youtube.png" height="40px"/></a>
+        </div>
+    </footer>
+    <script>
+        //menu 縮放
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("hide")
+    }
+        
+
+        //禮包
+        var flag = true;
+        function togglePackage() {
+            var package = document.getElementById("package");
+            package.classList.toggle("disappear");
+            signupWindow.classList.add("disappear");
+            loginWindow.classList.add("disappear");
+
+
+            var cat = document.getElementById("cat");
+            if (flag) {
+            cat.src = "./image/艾路貓.png";
+            flag = false;
+            } 
+            else {
+            cat.src = "./image/貓貓大放送.png";
+            flag = true;
+            } 
+        }
+
+        function closePackage() {
+            var package = document.getElementById("package");
+            package.classList.toggle("disappear");
+
+        }
+
+        document.getElementById("cat").onclick = togglePackage;
+        document.getElementById("packageclose").onclick = closePackage;
+
+        // document.getElementById("cat").addEventListener('click',() =>{
+        //     togglePackage();
+        //     catmove();
+        // });                            這樣寫可以一次觸發兩種事件
+        
+
+        //滾動後出現貓
+        function toggleCat() {
+            var cat = document.getElementById("cat");
+            
+            if(window.pageYOffset >= 1600){
+                cat.classList.add("disappear");
+            } else if(window.pageYOffset > 240 && window.innerWidth >= 1200) {
+                cat.classList.remove("disappear");
+            } else if(window.pageYOffset > 150 && window.innerWidth < 1200) {
+                cat.classList.remove("disappear");
+            } else if(window.pageYOffset > 50 && window.innerWidth < 900) {
+                cat.classList.remove("disappear");
+            } else if(window.pageYOffset > 1 && window.innerWidth < 600) {
+                cat.classList.remove("disappear");
+            } else {
+                cat.classList.add("disappear");
+            }
+        }
+        window.onscroll = toggleCat;
+
+        //購買
+
+        const purchaseBtn = document.getElementById("purchase");
+        var d = 0;
+        function purchase() {
+            if(loginCheck) {
+                purchaseBtn.innerHTML = '<div style="transform:rotate('+d+'deg);">' + '<i class="bi bi-arrow-clockwise">' + '</i>' + '</div>'
+                var a = setInterval(() => {
+                    d += 30;
+                    purchaseBtn.innerHTML = '<div style="transform:rotate('+d+'deg);">' + '<i class="bi bi-arrow-clockwise">' + '</i>' + '</div>'
+                }, 80)
+                setTimeout(() => {
+                    purchaseBtn.innerHTML = "購買成功";
+                    clearInterval(a);
+                },2000)
+            }else {               
+                alert("請先登入");
+                toggleLogin();
+            }}
+        
+
+        purchaseBtn.addEventListener("click",purchase);
+
+
+        //註冊
+        
+        const signupBtn = document.getElementById("signupbtn");
+
+        function signup() {
+            const password1 = document.getElementById("password1");
+            const password2 = document.getElementById("password2");
+            const signupAccount = document.getElementById("signupaccount");
+            const accountList = localStorage.getItem("account")
+
+            if(signupAccount.value == accountList) {
+                alert("用戶已註冊")
+            }
+            else if(password1.value == password2.value) {
+                const accountValue = signupAccount.value;
+                localStorage.setItem("account",accountValue);
+                const passwordValue = password1.value;
+                localStorage.setItem("password",passwordValue);
+                alert("註冊成功")
+            } else {
+                alert("密碼輸入不正確");
+        }
+}
+        signupBtn.addEventListener("click",signup);
+
+        //登入
+        
+        const loginBtn = document.getElementById("loginbtn");
+
+        function login() {
+            const account = document.getElementById("account");
+            const password = document.getElementById("password");
+            const accountList = localStorage.getItem("account");
+            const passwordList = localStorage.getItem("password");
+
+            if(account.value == accountList && password.value == passwordList) {
+                alert("登入成功");
+                localStorage.setItem("login",true);
+                location.reload;
+            }else if(account.value !== accountList){
+                alert("無此用戶");
+            }else if(account.value == accountList && password.value !== passwordList){
+                alert("密碼錯誤");
+            }
+        }
+        loginBtn.addEventListener("click",login);
+
+        //登入畫面跳出 
+
+        const loginButton = document.getElementById("loginbutton");
+        const loginWindow = document.getElementById("login");
+        const signupButton = document.getElementById("signupbutton");
+        const signupWindow = document.getElementById("signup");
+        const signupClose = document.getElementById("signupclose");
+        const loginClose = document.getElementById("loginclose");
+
+
+        function toggleLogin() {
+            loginWindow.classList.toggle("disappear");
+            signupWindow.classList.add("disappear");
+            package.classList.add("disappear");
+        }
+
+        function hideLogin() {
+            loginWindow.classList.add("disappear");
+            signupWindow.classList.remove("disappear");
+        }
+
+        function closeSignup() {
+            signupWindow.classList.add("disappear");
+        }
+        function closeLogin() {
+            loginWindow.classList.add("disappear");
+        }
+
+
+        loginButton.addEventListener("click",toggleLogin);
+        signupButton.addEventListener("click",hideLogin);
+        signupClose.addEventListener("click",closeSignup);
+        loginClose.addEventListener("click",closeLogin);
+
+        //登入判斷
+        
+        const member = document.getElementById("member");
+        const loginCheck = localStorage.getItem("login");
+        const logoutButton = document.getElementById("logout");
+
+       
+        function memberCheck(){
+            if(loginCheck) {
+                const accountList = localStorage.getItem("account");
+                member.innerHTML ="<span style='font-size:18px;color:white;'>" + "會員:" +'<br>' + accountList + '</span>';
+                logoutButton.classList.remove("disappear");
+        }
+    }    
+
+        window.onload = memberCheck;
+
+    </script>
+
+</body>
+
+</html>

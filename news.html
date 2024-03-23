@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News-Monster Hunter Now</title>
+    <link rel="icon" type="image/x-icon" href="./image/logo.png" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./second.css" />
+
+    <style>
+         #news20231207 {
+            background-image: url(./image/news5.png);
+            background-size: contain;
+            
+        }
+        
+        #news20231120 {
+            background-image: url(./image/news4.png);
+            background-size: contain;
+
+        }
+
+        #news20231120b {
+            background-image: url(./image/news6.jpg);
+            background-size: contain;
+
+        }
+
+        #news20231114 {
+            background-image: url(./image/news2.jpg);
+            background-size: contain;
+
+        }
+
+        #news20231101 {
+            background-image: url(./image/news7.jpg);
+            background-size: contain;
+
+        }
+
+        #news20231027 {
+            background-image: url(./image/news3.jpg);
+            background-size: contain;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <button class="btn-menu" onclick="toggleMenu()">&#9776;</button>
+        <h1 class="logo">Monster Hunter Now</h1>
+        <div id="menu" class="hide">
+            <ul>
+                <li><a href="./index.html" class="menu">首頁</a></li>
+                <li><a href="./news.html" class="menu">NEWS</a></li>   
+                <li><a href="./weapon.html" class="menu">武器類型</a></li>
+                <li><a href="./monster.html" class="menu">魔物介紹</a></li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <span id="member">
+                <h5 id="loginbutton" class="loginbtn">Login</h5>
+            </span>
+            <button id="logout" class="disappear" onclick="localStorage.removeItem('login'),window.location.reload()">登出</button>
+            <a href="./index.html" class="btn-download">立即下載</a>
+        </div>
+    </header>
+    <div id="login" class="disappear login" >
+        <a class="packageclose rounded-circle" id="loginclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div >
+                <label for="account"><p>帳號:</p></label>
+                <input type="text" id="account" name="account">
+            </div>
+            <div>
+                <label for="password"><p>密碼:</p></label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="loginbtn">登入</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+                <h5 id="signupbutton" class="loginbtn">註冊</h5>
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="disappear login">
+        <a class="packageclose rounded-circle" id="signupclose">X</a>
+        <form class="d-flex flex-column align-items-center">
+            <div>
+                <label for="signupaccount"><p>帳號:</p></label>
+                <input type="text" id="signupaccount" name="signupaccount">
+            </div>
+            <div>
+                <label for="password1"><p>密碼:</p></label>
+                <input type="password" id="password1" name="password1">
+            </div>
+            <div>
+                <label for="password2"><p>確認密碼:</p></label>
+                <input type="password" id="password2" name="password2">
+            </div>
+            <div class="d-flex mt-2 ">
+                <button class="me-2 p-1" type="submit" name="submit" id="signupbtn">註冊</button>
+                <button class="me-2 p-1" type="reset" name="reset">重填</button>
+            </div>
+        </form>
+    </div>
+    <img class="backgroundimage img-fluid" src="./image/底圖.png" > 
+    <main>
+        <h2>News</h2>
+        <a href="./news20231207.html"><div class="newscard">
+            <div class="newsimg"  id="news20231207">
+            </div>
+            <div class="newscardbody">
+                <p>News 2023.12.07</p>
+                <h2>大型更新「雪花散亂之碧雷」到來！</h2>
+            </div>
+        </div></a> 
+        <hr class="news-hr">
+        <a href="./news20231120.html"><div class="newscard">
+            <div class="newsimg"  id="news20231120">
+            </div>
+            <div class="newscardbody">
+                <p>News 2023.11.20</p>
+                <h2>沙漠咆嘯 角龍</h2>
+            </div>
+        </div></a> 
+        <hr class="news-hr">
+        <a href="./qualily1120.html"><div class="newscard">
+            <div class="newsimg" id="news20231120b">
+            </div>
+            <div class="newscardbody">
+                <p>News 2023.11.20</p>
+                <h2>來自庫萊莉的特殊任務</h2>
+            </div>
+        </div></a>
+        <hr class="news-hr">
+        <a href="./news20231114.html"><div class="newscard">
+            <div class="newsimg" id="news20231114">
+            </div>
+            <div class="newscardbody">
+                <p>News 2023.11.14</p>
+                <h2>風中飄盪的寒意降臨!討伐風飄龍吧!</h2>
+            </div>
+        </div></a>
+       
+        <hr class="news-hr">
+        <a href="./news20231101.html"><div class="newscard">
+            <div class="newsimg" id="news20231101">
+            </div>
+            <div class="newscardbody">
+                <p>News 2023.11.01</p>
+                <h2>《魔物獵人 Now》：11月的活動公告！</h2>
+            </div>
+        </div></a>
+        <hr class="news-hr">
+        <a href="./news20231027.html"><div class="newscard">
+            <div class="newsimg" id="news20231027">
+            </div>
+            <div class="newscardbody">
+                <p>News 2023.10.27</p>
+                <h2>滿身泥濘大騷動！討伐泥魚龍吧</h2>
+            </div>
+        </div></a>   
+
+    </main>
+    <footer>  
+        <hr class="footer-hr">
+        <div class="tm">
+            <a href="https://nianticlabs.com/" target="_blank"><img src="./image/Niantic.png" height="70px"/></a>
+            <a href="https://www.capcom.com/" target="_blank"><img src="./image/CAPCOM.png" /></a>
+        </div>
+        <div class="socialMedia">
+            <a href="https://www.instagram.com/MH_Now_en/" target="_blank"><img src="./image/instagram.png" height="40px"/></a>
+            <a href="https://www.facebook.com/gaming/MHNowEN" target="_blank"><img src="./image/facebook.png" height="40px"/></a>
+            <a href="https://www.youtube.com/channel/UC9wPQ_V2Rap5z1idDLOrd9w" target="_blank"><img src="./image/youtube.png" height="40px"/></a>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("hide")
+    }
+
+            //註冊
+        
+            const signupBtn = document.getElementById("signupbtn");
+
+function signup() {
+    const password1 = document.getElementById("password1");
+    const password2 = document.getElementById("password2");
+    const signupAccount = document.getElementById("signupaccount");
+    const accountList = localStorage.getItem("account")
+
+    if(signupAccount.value == accountList) {
+        alert("用戶已註冊")
+    }
+    else if(password1.value == password2.value) {
+        const accountValue = signupAccount.value;
+        localStorage.setItem("account",accountValue);
+        const passwordValue = password1.value;
+        localStorage.setItem("password",passwordValue);
+        alert("註冊成功")
+    } else {
+        alert("密碼輸入不正確");
+}
+}
+signupBtn.addEventListener("click",signup);
+
+//登入
+
+const loginBtn = document.getElementById("loginbtn");
+
+function login() {
+    const account = document.getElementById("account");
+    const password = document.getElementById("password");
+    const accountList = localStorage.getItem("account");
+    const passwordList = localStorage.getItem("password");
+
+    if(account.value == accountList && password.value == passwordList) {
+        alert("登入成功");
+        localStorage.setItem("login",true);
+        location.reload;
+    }else if(account.value !== accountList){
+        alert("無此用戶");
+    }else if(account.value == accountList && password.value !== passwordList){
+        alert("密碼錯誤");
+    }
+}
+loginBtn.addEventListener("click",login);
+
+//登入畫面跳出 
+
+const loginButton = document.getElementById("loginbutton");
+const loginWindow = document.getElementById("login");
+const signupButton = document.getElementById("signupbutton");
+const signupWindow = document.getElementById("signup");
+const signupClose = document.getElementById("signupclose");
+const loginClose = document.getElementById("loginclose");
+
+
+function toggleLogin() {
+    loginWindow.classList.toggle("disappear");
+    signupWindow.classList.add("disappear");
+    package.classList.add("disappear");
+}
+
+function hideLogin() {
+    loginWindow.classList.add("disappear");
+    signupWindow.classList.remove("disappear");
+}
+
+function closeSignup() {
+    signupWindow.classList.add("disappear");
+}
+function closeLogin() {
+    loginWindow.classList.add("disappear");
+}
+
+
+loginButton.addEventListener("click",toggleLogin);
+signupButton.addEventListener("click",hideLogin);
+signupClose.addEventListener("click",closeSignup);
+loginClose.addEventListener("click",closeLogin);
+
+//登入判斷
+
+const member = document.getElementById("member");
+const loginCheck = localStorage.getItem("login");
+const logoutButton = document.getElementById("logout");
+
+
+function memberCheck(){
+    if(loginCheck) {
+        const accountList = localStorage.getItem("account");
+        member.innerHTML ="<span style='font-size:18px;color:white;'>" + "會員:" +'<br>' + accountList + '</span>';
+        logoutButton.classList.remove("disappear");
+}
+}    
+
+window.onload = memberCheck;
+
+    </script>
+</body>
+</html>

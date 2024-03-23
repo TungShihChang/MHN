@@ -1,0 +1,506 @@
+body {
+    align-items: center;
+}
+
+.backgroundimage {
+    margin-top: 100px;
+}
+
+main {
+    width: 85%;
+}
+
+.newscard {
+    overflow: hidden;
+    height: 240px;
+    outline: 2px solid bisque ;
+    padding: 5px;
+    display: flex;
+    background-color: rgba(236, 224, 204, 0.267);
+}
+
+.newscard:hover {
+    background-color: rgb(102, 92, 80);
+}
+
+.newsimg {
+    overflow: hidden;
+    width: 480px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.newscardbody {
+    border: 2px solid bisque;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+    flex-basis: 1200px;
+    margin-left: 5px;
+}
+
+.newscardbody p {
+    color: #FDF29D;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+} 
+
+.newscardbody h2 {
+    color: #fff;
+    font-size: 30px;
+}
+
+main a {
+    text-decoration: none;
+}
+
+.news-hr {
+    border: 1px dashed #eee4cf;
+    margin: 70px 0;
+    width: 100%;
+}
+
+.monster-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monster-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.monster-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 130px;
+    border: 1px solid #524d44;
+    border-radius: 10px;
+    background-color: #ceb78a;
+}
+
+.monster-nav img {
+    margin-top: 10px;
+}
+
+.monster-nav p {
+    font-size: 22px;
+    color: white;
+    margin: 0;
+}
+
+.monster-nav:hover p {
+    color: black;
+}
+
+.monster-nav:hover {
+    background-color: #f1e1c3;
+
+}
+
+.monster-detail {   
+    width: 100%;
+    margin-top: 50px;
+    background-color: #ceb78a;
+    border:2px solid #524d44;
+    border-radius:3px;
+    color: #524d44;
+}
+
+.monster-detail h3{
+    font-size: 36px;
+    font-weight: 500;
+    font-style: italic;
+    -webkit-text-stroke: 1px rgb(36, 35, 32);
+}
+
+.monster-detail h5{
+    font-size: 26px;
+    font-weight: 800;
+
+}
+
+.monster-detail p{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.monster-img{
+    display: flex;
+    align-items: center;
+}
+
+
+.monster-name>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.monster-weakness>.hide {
+    display: none;
+}
+
+.fire {
+    color: red;
+}
+
+.water {
+    color: blue;
+}
+
+.lightning {
+    color: rgb(255, 255, 0)
+}
+
+.ice {
+    color: rgb(43, 232, 232);
+}
+
+.dragon {
+    color: rgb(99, 44, 99);
+}
+
+.palsy {
+    color: rgb(212, 114, 3);
+}
+
+.sleep {
+    color: rgb(92, 114, 159);
+}
+
+.poison {
+    color: rgb(203, 15, 203);
+}
+
+.weapon-nav {
+    background-color: #ceb78a;
+    width: 100px;
+    height: 100px;
+}
+
+
+.weapon-detail {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.weapon-r {
+    display: flex;
+    margin-top: 50px;
+}
+
+.weapon-wrapper-r {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    background-color: #63442356;
+    border-radius: 5px 0 0 5px;
+    border-bottom: 2px solid white;
+}
+
+.weapon-video-r {
+    display: flex;
+    border-radius: 5px 5px 5px 0;
+    overflow: hidden;
+    width: 310px;
+    height: 550px;
+    flex-shrink: 0;
+    z-index: 100;
+}
+
+.weapon-l {
+    display: flex;
+    margin-top: 50px;
+}
+.weapon-wrapper-l {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    background-color: #63442356;
+    border-radius: 0 5px 5px 0;
+    border-bottom: 2px solid white;
+}
+
+.weapon-video-l {
+    display: flex;
+    border-radius: 5px 5px 0 5px;
+    overflow: hidden;
+    width: 310px;
+    height: 550px;
+    flex-shrink: 0;
+    z-index: 100;
+}
+
+.weapon-detail h2 {
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+}
+
+.weapon-detail p {
+    font-size: 24px;
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 160px;
+    flex-wrap: wrap;
+    left: 35%;
+    width: 40%;
+    z-index: 101;
+}
+
+.stickymon {
+    position: fixed;
+    top: 165px;
+    left: 10%;
+    flex-wrap: wrap;
+    width: 80%;
+    z-index: 101;
+}
+
+
+.navbtn {
+    position: fixed;
+    top: 110px;
+    left: 45%;
+    z-index: 101;
+    padding: 5px;
+    width: 170px;
+    background-color: #ceb78a;
+    border-radius: 10px;
+}
+
+.navbtn h5 {
+    margin-top: 5px;
+}
+
+
+/* Responsive */
+@media screen and (min-width:1600px) {
+
+    .navbtn {
+        left: 50%;
+
+    }
+
+}
+
+@media screen and (max-width:1599px) {
+    .navbtn {
+        left: 48%;
+
+    }
+
+}
+
+
+@media screen and (max-width:1280px) {
+    .navbtn {
+        left: 46%;
+
+    }
+
+    .sticky {
+        left: 25%;
+        width: 50%;
+    
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .weapon-l {
+        flex-direction: column;
+    }
+
+    .weapon-wrapper-l {
+        margin-top: -110px;
+        margin-left: 30px;
+        padding: 80px 20px 30px 20px;
+    }
+ 
+    .weapon-r {
+        align-items: end;
+        flex-direction: column-reverse;
+    }
+
+    .weapon-wrapper-r {
+        margin-top: -110px;
+        margin-right: 30px;
+        padding: 80px 20px 30px 20px;    
+    }
+
+    .navbtn {
+        left: 42%;
+
+    }
+
+    .monster-nav{
+        width: 130px;
+        height: 110px;    
+    }
+
+    .monster-nav img {
+        height: 75px;
+    }
+
+    .sticky {
+        left: 20%;
+        width: 60%;
+    
+    }
+
+}
+
+
+@media screen and (max-width:850px) {
+    .monster-navbar {
+        width: 100%;
+    }    
+
+    .weapon-nav {
+        width: 79px;
+        height: 79px;
+    }
+
+    .weapon-nav img {
+        width: 79px;
+    }
+
+
+    .navbtn {
+        left: 40%;
+    }
+
+    .stickymon {
+        left: 15%;
+        width: 70%;
+    }
+
+    .monster-nav{
+        width: 110px;
+        height: 100px;    
+    }
+
+    .monster-nav img {
+        height: 64px;
+    }
+
+    .monster-nav p {
+        font-size: 18px;
+    }
+
+
+
+}
+
+@media screen and (max-width:750px) {
+    .monster-nav{
+        width: 100px;
+        height: 90px;    
+    }
+
+    .monster-nav img {
+        height: 58px;
+    }
+
+
+
+}
+
+@media screen and (max-width:600px) {
+
+    .weapon-wrapper-l {
+        width: 320px;
+    }
+
+    .weapon-wrapper-r {
+        width: 320px;
+    }
+
+    .weapon-nav {
+        width: 70px;
+        height: 70px;
+    }
+
+    .weapon-nav img {
+        width: 70px;
+    }
+
+
+    .navbtn {
+        left: 35%;
+    }
+
+    .stickymon {
+        left: 2%;
+        width: 94%;
+    }
+
+    .sticky {
+        left: 15%;
+        width: 70%;
+    
+    }
+
+    .monster-nav{
+        width: 95px;
+        height: 88px;    
+    }
+
+    .monster-nav img {
+        height: 55px;
+    }
+
+    .monster-nav p {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .weapon-l{
+        align-items: center;
+    }
+
+    .weapon-r{
+        align-items: center;
+    }
+
+    .weapon-video-l {
+        width: 280px;
+    }
+    .weapon-video-l {
+        width: 280px;
+    }
+
+    .weapon-detail {
+        width: 100%;
+    }
+
+    .stickymon {
+        left: 1%;
+        width: 90%;
+    }
+
+    
+}
